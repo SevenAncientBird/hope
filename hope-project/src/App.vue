@@ -2,16 +2,9 @@
   <router-view/>
 </template>
 
-<script>
+<script setup>
 
-export default {
-  name: 'App',
-  components: {
-
-  }
-}
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
