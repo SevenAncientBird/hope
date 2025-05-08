@@ -1,12 +1,21 @@
-const { defineConfig } = require('@vue/cli-service')
-const path = require('path')
-const { config } = require('process')
+const { defineConfig } = require('@vue/cli-service');
+const path = require('path');
+const AutoImport = require('unplugin-auto-import/webpack').default;
+const Components = require('unplugin-vue-components/webpack').default;
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers');
 
 module.exports = defineConfig({
-  pluginOptions:[
-
-  ],
   transpileDependencies: true,
+  configureWebpack:{
+    plugins:[
+      AutoImport({
+        resolver:[ElementPlusResolver()],
+      }),
+      Components({
+        resolver: [ElementPlusResolver()],
+      })
+    ]
+  },
   devServer:{
     proxy:{
       '/api':{

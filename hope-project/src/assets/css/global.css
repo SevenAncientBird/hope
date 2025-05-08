@@ -1,0 +1,15 @@
+
+.primary-title{
+    line-height: 48px;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.primary-text{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p{
+    font-size: 16px;
+}
